@@ -8,8 +8,8 @@ describe("real-world-application.js", () => {
     }
     describe("1. urlSlugs Function", () => {
         let urlSlugs = window["urlSlugs"]
-        it('the array contains all the keys from the "me" object', () => {
-            chai.assert.sameMembers(urlSlugs(c), res, 'Make sure to return and array of the keys')
+        it('the array contains all lowercase and hyphenated color names', () => {
+            chai.assert.sameMembers(urlSlugs(c), res, 'Make sure to return the array of url slugs')
         })
     })
 })
